@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "NITK Captive Portal Auto Login",
+  "version": "1.0",
+  "description": "Automatically fills and submits NITK Captive Portal.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://nac.nitk.ac.in:8090/httpclient.html"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
